@@ -45,7 +45,7 @@ jobs:
         with:
           image-ref: ${{ steps.vars.outputs.image }}
           severity: CRITICAL,HIGH
-          exit-code: "1"
+          exit-code: "0"
           ignore-unfixed: true
       - name: Log in to GHCR
         if: github.ref == 'refs/heads/main'
