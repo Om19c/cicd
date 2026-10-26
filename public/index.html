@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CI/CD demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CI/CD demo</h1>
+    <p>A web application deployed automatically with GitHub Actions, Docker and Trivy.</p>
+    <p id="status" class="badge">Checking server…</p>
+  </header>
+
+  <main>
+    <h2>Pipeline stages</h2>
+    <section class="cards">
+      <div class="card"><span>1</span><h3>Commit</h3><p>Code is pushed to GitHub.</p></div>
+      <div class="card"><span>2</span><h3>Test</h3><p>ESLint and Jest run automatically.</p></div>
+      <div class="card"><span>3</span><h3>Build</h3><p>Docker image is built and scanned with Trivy.</p></div>
+      <div class="card"><span>4</span><h3>Deploy</h3><p>Image is deployed to staging, then production.</p></div>
+    </section>
+
+    <h2>Tools used</h2>
+    <p class="tools">
+      <b>Git</b> <b>GitHub Actions</b> <b>Node.js</b> <b>Jest</b> <b>ESLint</b>
+      <b>Docker</b> <b>Trivy</b> <b>GHCR</b>
+    </p>
+  </main>
+
+  <footer>Version: <span id="version">-</span> | Environment: <span id="env">-</span></footer>
+
+  <script>
+    fetch("/api/info").then(r => r.json()).then(d => {
+      document.getElementById("version").textContent = d.version;
+      document.getElementById("env").textContent = d.env;
+    });
+    fetch("/health").then(r => r.json()).then(d => {
+      const s = document.getElementById("status");
+      s.textContent = "Server status: " + d.status;
+      s.classList.add("ok");
+    }).catch(() => {
+      document.getElementById("status").textContent = "Server status: down";
+    });
+  </script>
+</body>
+</html>

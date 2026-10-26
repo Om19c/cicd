@@ -1,9 +1,8 @@
+const path = require("path");
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("<h1>Hello from the CI/CD demo 🚀</h1>");
-});
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 app.get("/health", (req, res) => res.status(200).json({ status: "ok" }));
 
