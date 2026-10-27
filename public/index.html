@@ -4,45 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CI/CD demo</title>
+  <meta name="description" content="A simple web application demonstrating a CI/CD pipeline.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>CI/CD demo</h1>
-    <p>A web application deployed automatically with GitHub Actions, Docker and Trivy.</p>
-    <p id="status" class="badge">Checking server…</p>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="/">CI/CD <span>demo</span></a>
+      <a class="repo-link" href="https://github.com/Om19c/cicd" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+    </div>
   </header>
 
-  <main>
-    <h2>Pipeline stages</h2>
-    <section class="cards">
-      <div class="card"><span>1</span><h3>Commit</h3><p>Code is pushed to GitHub.</p></div>
-      <div class="card"><span>2</span><h3>Test</h3><p>ESLint and Jest run automatically.</p></div>
-      <div class="card"><span>3</span><h3>Build</h3><p>Docker image is built and scanned with Trivy.</p></div>
-      <div class="card"><span>4</span><h3>Deploy</h3><p>Image is deployed to staging, then production.</p></div>
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">WEB APPLICATION · DEVOPS PROJECT</p>
+      <h1>CI/CD demo</h1>
+      <p class="intro-text">A small web application built to demonstrate how automated testing and delivery can help teams release code more reliably.</p>
+      <a class="button" href="https://github.com/Om19c/cicd/actions" target="_blank" rel="noreferrer">View workflow runs</a>
     </section>
 
-    <h2>Tools used</h2>
-    <p class="tools">
-      <b>Git</b> <b>GitHub Actions</b> <b>Node.js</b> <b>Jest</b> <b>ESLint</b>
-      <b>Docker</b> <b>Trivy</b> <b>GHCR</b>
-    </p>
+    <section class="section">
+      <div class="section-title">
+        <h2>How the pipeline works</h2>
+        <p>From a code change to a verified build.</p>
+      </div>
+      <div class="pipeline">
+        <article class="pipeline-card">
+          <span class="step">01</span>
+          <h3>Code</h3>
+          <p>Changes are tracked and shared using Git and GitHub.</p>
+        </article>
+        <article class="pipeline-card">
+          <span class="step">02</span>
+          <h3>Test</h3>
+          <p>Automated checks help catch errors before delivery.</p>
+        </article>
+        <article class="pipeline-card">
+          <span class="step">03</span>
+          <h3>Build</h3>
+          <p>The application is packaged into a Docker image.</p>
+        </article>
+        <article class="pipeline-card">
+          <span class="step">04</span>
+          <h3>Verify</h3>
+          <p>Workflow checks verify that the build and application respond as expected.</p>
+        </article>
+      </div>
+      <p class="note">Note: the exact deployment steps depend on the GitHub Actions workflow configured in this repository.</p>
+    </section>
+
+    <section class="section details-grid">
+      <div class="content-panel">
+        <h2>Tools used</h2>
+        <p class="panel-intro">The project brings together tools for source control, testing, packaging, and security checks.</p>
+        <ul class="tool-list">
+          <li>Git and GitHub</li>
+          <li>Node.js and Express</li>
+          <li>GitHub Actions</li>
+          <li>Jest and Supertest</li>
+          <li>ESLint and npm audit</li>
+          <li>Docker and Trivy</li>
+          <li>GitHub Container Registry</li>
+        </ul>
+      </div>
+      <div class="content-panel">
+        <h2>Application endpoints</h2>
+        <p class="panel-intro">The Express application exposes these routes for basic checks and app information.</p>
+        <div class="endpoint">
+          <span class="method">GET</span>
+          <code>/</code>
+          <span class="endpoint-description">Home page</span>
+        </div>
+        <div class="endpoint">
+          <span class="method">GET</span>
+          <code>/health</code>
+          <span class="endpoint-description">Health check</span>
+        </div>
+        <div class="endpoint">
+          <span class="method">GET</span>
+          <code>/api/info</code>
+          <span class="endpoint-description">Application information</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout">
+      <div>
+        <h2>Want to see the code?</h2>
+        <p>Explore the repository and review the workflow, tests, and application files.</p>
+      </div>
+      <a class="button button-light" href="https://github.com/Om19c/cicd" target="_blank" rel="noreferrer">Open repository ↗</a>
+    </section>
   </main>
 
-  <footer>Version: <span id="version">-</span> | Environment: <span id="env">-</span></footer>
-
-  <script>
-    fetch("/api/info").then(r => r.json()).then(d => {
-      document.getElementById("version").textContent = d.version;
-      document.getElementById("env").textContent = d.env;
-    });
-    fetch("/health").then(r => r.json()).then(d => {
-      const s = document.getElementById("status");
-      s.textContent = "Server status: " + d.status;
-      s.classList.add("ok");
-    }).catch(() => {
-      document.getElementById("status").textContent = "Server status: down";
-    });
-  </script>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>CI/CD demo</span>
+      <span>College DevOps project</span>
+    </div>
+  </footer>
 </body>
 </html>
