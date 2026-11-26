@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Learning Guide</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+header {
+    background: #1e293b;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 2px solid #38bdf8;
+}
+
+header h1 {
+    font-size: 38px;
+    color: #38bdf8;
+}
+
+header p {
+    margin-top: 10px;
+    color: #cbd5e1;
+}
+
+nav {
+    background: #111827;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #38bdf8;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 8px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+.card h3 {
+    color: #f8fafc;
+    margin-bottom: 8px;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+footer {
+    text-align: center;
+    background: #111827;
+    padding: 25px;
+    color: #94a3b8;
+}
+
+button {
+    background: #0284c7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0369a1;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>DevOps Learning Guide</h1>
+    <p>Learn, Build, Automate and Deploy</p>
+    <p>My journey towards becoming a DevOps Engineer</p>
+</header>
+
+<nav>
+    <a href="#intro">Introduction</a>
+    <a href="#tools">Tools</a>
+    <a href="#cloud">Cloud</a>
+    <a href="#pipeline">CI/CD</a>
+    <a href="#roadmap">Roadmap</a>
+</nav>
+
+<div class="container">
+
+<section id="intro">
+    <h2>Introduction to DevOps</h2>
+
+    <div class="card">
+        <h3>What is DevOps?</h3>
+        <p>
+            DevOps is a combination of development and operations practices
+            that helps teams build, test, release and maintain software
+            faster and more reliably.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Why DevOps?</h3>
+        <ul>
+            <li>Faster software delivery</li>
+            <li>Better teamwork</li>
+            <li>Automation of repetitive tasks</li>
+            <li>Reliable software deployment</li>
+            <li>Continuous improvement</li>
+            <li>Reduced manual errors</li>
+        </ul>
+    </div>
+</section>
+
+<section id="tools">
+    <h2>DevOps Tools</h2>
+
+    <div class="card">
+        <h3>Git</h3>
+        <p>Git is a version control system used to track changes in source code.</p>
+    </div>
+
+    <div class="card">
+        <h3>GitHub</h3>
+        <p>GitHub provides a platform for storing code, collaboration and project management.</p>
+    </div>
+
+    <div class="card">
+        <h3>Docker</h3>
+        <p>Docker allows applications to run inside containers with their dependencies.</p>
+    </div>
+
+    <div class="card">
+        <h3>Jenkins</h3>
+        <p>Jenkins is an automation server used for building and testing software.</p>
+    </div>
+
+    <div class="card">
+        <h3>Kubernetes</h3>
+        <p>Kubernetes helps manage, scale and orchestrate containerized applications.</p>
+    </div>
+
+    <div class="card">
+        <h3>Ansible</h3>
+        <p>Ansible automates server configuration and infrastructure management.</p>
+    </div>
+
+    <div class="card">
+        <h3>Terraform</h3>
+        <p>Terraform is an Infrastructure as Code tool used to provision cloud resources.</p>
+    </div>
+</section>
+
+<section id="cloud">
+    <h2>Cloud Computing</h2>
+
+    <div class="card">
+        <h3>What is Cloud Computing?</h3>
+        <p>
+            Cloud computing provides computing resources such as servers,
+            databases, storage and networking over the internet.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Cloud Service Models</h3>
+        <ul>
+            <li>IaaS - Infrastructure as a Service</li>
+            <li>PaaS - Platform as a Service</li>
+            <li>SaaS - Software as a Service</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Cloud Providers</h3>
+        <ul>
+            <li>Amazon Web Services (AWS)</li>
+            <li>Microsoft Azure</li>
+            <li>Google Cloud Platform (GCP)</li>
+        </ul>
+    </div>
+</section>
+
+<section id="pipeline">
+    <h2>CI/CD Pipeline</h2>
+
+    <div class="card">
+        <h3>Continuous Integration</h3>
+        <p>
+            Developers regularly merge code changes into a shared repository.
+            Automated builds and tests help detect problems early.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Continuous Delivery</h3>
+        <p>
+            The software is kept ready for release through automated
+            build, testing and deployment preparation.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Continuous Deployment</h3>
+        <p>
+            Changes that pass the required automated checks can be
+            deployed automatically to the production environment.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Pipeline Stages</h3>
+        <ul>
+            <li>Source Code</li>
+            <li>Build</li>
+            <li>Test</li>
+            <li>Quality Check</li>
+            <li>Package</li>
+            <li>Deploy</li>
+            <li>Monitor</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Linux & Networking</h2>
+
+    <div class="card">
+        <h3>Linux Basics</h3>
+        <ul>
+            <li>File system structure</li>
+            <li>File permissions</li>
+            <li>Users and groups</li>
+            <li>Process management</li>
+            <li>Shell scripting</li>
+            <li>Package management</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Networking Concepts</h3>
+        <ul>
+            <li>IP Address</li>
+            <li>MAC Address</li>
+            <li>DNS</li>
+            <li>HTTP and HTTPS</li>
+            <li>TCP and UDP</li>
+            <li>Ports</li>
+            <li>Firewall</li>
+            <li>Load Balancer</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Monitoring & Logging</h2>
+
+    <div class="card">
+        <h3>Monitoring</h3>
+        <p>
+            Monitoring helps track application health, server performance,
+            resource usage and availability.
+        </p>
+        <ul>
+            <li>CPU usage</li>
+            <li>Memory usage</li>
+            <li>Disk utilization</li>
+            <li>Network traffic</li>
+            <li>Application response time</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Popular Monitoring Tools</h3>
+        <ul>
+            <li>Prometheus</li>
+            <li>Grafana</li>
+            <li>ELK Stack</li>
+            <li>Datadog</li>
+        </ul>
+    </div>
+</section>
+
+<section id="roadmap">
+    <h2>DevOps Learning Roadmap</h2>
+
+    <div class="card">
+        <h3>Phase 1 - Fundamentals</h3>
+        <ul>
+            <li>Computer Networks</li>
+            <li>Linux</li>
+            <li>Git and GitHub</li>
+            <li>Basic scripting</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Phase 2 - Development</h3>
+        <ul>
+            <li>HTML and CSS</li>
+            <li>JavaScript</li>
+            <li>Backend fundamentals</li>
+            <li>APIs</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Phase 3 - Automation</h3>
+        <ul>
+            <li>CI/CD</li>
+            <li>Jenkins</li>
+            <li>Automated testing</li>
+            <li>Build tools</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Phase 4 - Containers</h3>
+        <ul>
+            <li>Docker</li>
+            <li>Docker Images</li>
+            <li>Docker Containers</li>
+            <li>Docker Compose</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Phase 5 - Cloud</h3>
+        <ul>
+            <li>AWS Fundamentals</li>
+            <li>EC2</li>
+            <li>S3</li>
+            <li>IAM</li>
+            <li>VPC</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Phase 6 - Orchestration</h3>
+        <ul>
+            <li>Kubernetes</li>
+            <li>Pods</li>
+            <li>Deployments</li>
+            <li>Services</li>
+            <li>Scaling</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>My DevOps Goals</h2>
+
+    <div class="card">
+        <ul>
+            <li>Improve my Linux knowledge</li>
+            <li>Understand Git deeply</li>
+            <li>Build CI/CD pipelines</li>
+            <li>Learn Docker</li>
+            <li>Explore AWS</li>
+            <li>Deploy real-world applications</li>
+            <li>Practice automation</li>
+            <li>Build hands-on projects</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Learning Quote</h2>
+
+    <div class="card">
+        <h3 class="highlight">
+            Learn continuously. Build consistently.
+            Automate intelligently.
+        </h3>
+
+        <p>
+            Every small project is a step towards mastering technology.
+        </p>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    <p>DevOps Learning Guide | Learning by Building</p>
+    <p>Version 1.0 | 2026</p>
+</footer>
+
+</body>
+</html>
